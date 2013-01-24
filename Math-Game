@@ -1,0 +1,213 @@
+import random
+import time
+
+s = False
+q = input("Enter Your Name: ")
+
+if q == "Frank":
+    q = "Almighty God"
+elif q == "frank":
+    q = "Almighty God"
+
+print("Hello",q,"Lets have a go shall we...")
+print()
+print("Year Groups:")
+print("Reception")
+print("Year One")
+print("Year Two")
+print("Year Three")
+print()
+r = (input("Enter your Year Group: "))
+
+def starting():
+    print()
+    print("Get Ready...")
+    print()
+    print("3...")
+    print()
+    print("2...")
+    print()
+    print("1...")
+    print()
+    print("GO!")
+
+def reception():
+    print("You have 20 seconds!")
+    starting()
+    start = time.time()
+    for y in range(1,8):
+        p = 0
+        for y in range(1,8):
+            i = random.randint(1,5)
+            l = random.randint(1,5)
+            x = i + l
+            print()
+            print (i,'+',l,'=',)
+            j = int(input("Answer: "))
+            if j == x:
+                print("Yes Well Done")
+                p = p + 1
+            elif j != x:
+                print("No its,",x)
+                p = p + 0
+            if time.time() - start > 20:
+                break
+        print()
+        print("You answered:",p,"right, out of 7")
+        break
+
+
+def yearone():
+    print("You have 30 seconds!")
+    starting()
+    start = time.time()
+    for y in range(1,18):
+        p = 0
+        for y in range(1,18):
+            i = random.randint(1,8)
+            l = random.randint(1,8)
+            x = i + l
+            print()
+            print(i,'+',l,'=',)
+            j=int(input("Answer: "))
+            if j == x:
+                print("Yes Well Done")
+                p = p + 1
+            elif j != x:
+                print("No its,",x)
+
+            if time.time() - start > 30:
+                break
+        print()
+        print("You answered:",p,"right, out of 17")
+        break        
+
+
+def yeartwo():
+    print("You have 40 seconds!")
+    starting()
+    start = time.time()
+    for y in range(1,22):
+        p = 0
+        for y in range(1,22):
+            i = random.randint(1,12)
+            l = random.randint(1,12)
+            x = i + l
+            print()
+            print(i,'+',l,'=',)
+            j=int(input("Answer: "))
+            if j==x:
+                print("Yes Well Done")
+                p = p + 1
+            elif j !=x:
+                print("No its,",x)
+
+            if time.time() - start > 40:
+                break
+        print()
+        print("You answered:",p,"right, out of 21")
+        break
+
+
+def yearthree():
+    print("You have 50 seconds!")
+    starting()
+    start = time.time()
+    for y in range(1,2):
+        p = 0
+        for y in range(1,32):
+            i = random.randint(1,12)
+            l = random.randint(1,12)
+            e = random.randint(1,2)
+            if e == 1:
+                k = '+'
+            elif e == 2:
+                k = 'x'
+            print()
+            print(i,k,l,'=')
+            if k == '+':
+                x = i + l
+            elif k == 'x':
+                x = i * l
+            j = int(input("Answer: "))
+            if j == x:
+                print("Yes Well Done")
+                p = p + 1
+            elif j != x:
+                print("No its,",x)
+
+            if time.time() - start > 50:
+                break
+        print()
+        print("You answered:",p,"right, out of 9")
+        break
+
+
+def yearfour():
+    print("You have 60 seconds!")
+    starting()
+    start = time.time()
+    for y in range(1,2):
+        p = 0
+        for y in range(1,32):
+            i = random.randint(1,12)
+            l = random.randint(1,12)
+            e = random.randint(1,2)
+            if e == 1:
+                k = '+'
+            elif e == 2:
+                k = 'x'
+            print()
+            print(i,k,l,'=')
+            if k == '+':
+                x = i + l
+            elif k == 'x':
+                x = i * l
+            j = int(input("Answer: "))
+            if j == x:
+                print("Yes Well Done")
+                p = p + 1
+            elif j != x:
+                print("No its,",x)
+
+            if time.time() - start > 60:
+                break
+        print()
+        print("You answered:",p,"right, out of 9")
+        break
+
+
+if r == 'reception':
+    reception()
+    s = True
+elif r == 'year one':
+    yearone()
+    s = True
+elif r == 'year two':
+    yeartwo()
+    s = True
+elif r == 'year three':
+    yearthree()
+    s = True
+
+
+def credit():
+    print()
+    print("Credits")
+    print()
+    print("Producer: Frank Gough")
+    print("Producer: Marco Siniscalco")
+    print("Producer: Will Reade")
+    print("Special thanks to:")
+    print("Mr Spavin")
+    print("Vlad Marinescu")
+
+if s == True:
+    print()
+    print("Thank you",q,"for playing, come back soon...")
+    credit()
+if s == False:
+    print()
+    r = (input("Enter your Year Group: "))
+
+
